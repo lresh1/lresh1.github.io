@@ -1,20 +1,3 @@
 This is my github pages for GES 778 class.
 
 
-map = {
-  const container = html`<div style="height:600px;">`;
-  yield container;
-  const map = L.map(container).setView([40.7299, -73.9923], 13);
-  L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg', {
-      attribution: 'Map tiles by <a target="_top" rel="noopener" href="http://stamen.com">Stamen Design</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" rel="noopener" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
-  }).addTo(map);
-}
-    
-    L = {
-  const L = await require("leaflet@1/dist/leaflet.js");
-  if (!L._style) {
-    const href = await require.resolve("leaflet@1/dist/leaflet.css");
-    document.head.appendChild(L._style = html`<link href=${href} rel=stylesheet>`);
-  }
-  return L;
-}
