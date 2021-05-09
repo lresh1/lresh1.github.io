@@ -1,25 +1,8 @@
-<div id="observablehq-title-2c73efd7"></div>
-<div id="observablehq-credit-2c73efd7"></div>
-<div id="observablehq-chart2-2c73efd7"></div>
-<div id="observablehq-viewof-vegaliteTest-2c73efd7"></div>
-<div id="observablehq-chart-2c73efd7"></div>
-<div id="observablehq-viewof-day-2c73efd7"></div>
-<div id="observablehq-viewof-line2-2c73efd7"></div>
-<div id="observablehq-viewof-line-2c73efd7"></div>
+<div id="observablehq-44e1cd5c"></div>
 <p>Credit: <a href="https://observablehq.com/@lresh1/covid-19-cases-by-county-maryland">COVID-19 Cases by County (Maryland) by lresh1</a></p>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@lresh1/covid-19-cases-by-county-maryland.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-2c73efd7"));
-  if (name === "credit") return new Inspector(document.querySelector("#observablehq-credit-2c73efd7"));
-  if (name === "chart2") return new Inspector(document.querySelector("#observablehq-chart2-2c73efd7"));
-  if (name === "viewof vegaliteTest") return new Inspector(document.querySelector("#observablehq-viewof-vegaliteTest-2c73efd7"));
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-2c73efd7"));
-  if (name === "viewof day") return new Inspector(document.querySelector("#observablehq-viewof-day-2c73efd7"));
-  if (name === "viewof line2") return new Inspector(document.querySelector("#observablehq-viewof-line2-2c73efd7"));
-  if (name === "viewof line") return new Inspector(document.querySelector("#observablehq-viewof-line-2c73efd7"));
-  return ["timeButtonsNaive"].includes(name);
-});
+new Runtime().module(define, Inspector.into("#observablehq-44e1cd5c"));
 </script>
