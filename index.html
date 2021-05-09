@@ -1,54 +1,25 @@
-This is my github pages for GES 778 class.
-<br></br>
+<div id="observablehq-title-2c73efd7"></div>
+<div id="observablehq-credit-2c73efd7"></div>
+<div id="observablehq-chart2-2c73efd7"></div>
+<div id="observablehq-viewof-vegaliteTest-2c73efd7"></div>
+<div id="observablehq-chart-2c73efd7"></div>
+<div id="observablehq-viewof-day-2c73efd7"></div>
+<div id="observablehq-viewof-line2-2c73efd7"></div>
+<div id="observablehq-viewof-line-2c73efd7"></div>
+<p>Credit: <a href="https://observablehq.com/@lresh1/covid-19-cases-by-county-maryland">COVID-19 Cases by County (Maryland) by lresh1</a></p>
 
-<!DOCTYPE html>
-<html>
-<head>
-	
-	<title>Quick Start - Leaflet</title>
-
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-	
-</head>
-<body>
-
-
-
-<div id="mapid" style="width: 1000px; height: 800px;"></div>
-<script>
-
-	var mymap = L.map('mapid').setView([39.01, -77.01], 9);
-
-
-	var Jawg_Dark = L.tileLayer('https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
-    		attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    		minZoom: 0,
-    		maxZoom: 22,
-    		subdomains: 'abcd',
-    		accessToken: 'we72s9JUn6MBMOdkCWiW3hIG0X9xDLSeJe3sD67QDsCWZEdO1D1hUvmn1qG2iDhy'
-
-  	}).addTo(mymap);;
-	var popup = L.popup();
-
-	function onMapClick(e) {
-		popup
-			.setLatLng(e.latlng)
-			.setContent("You clicked the map at " + e.latlng.toString())
-			.openOn(mymap);
-	}
-
-	mymap.on('click', onMapClick);
-
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@lresh1/covid-19-cases-by-county-maryland.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-2c73efd7"));
+  if (name === "credit") return new Inspector(document.querySelector("#observablehq-credit-2c73efd7"));
+  if (name === "chart2") return new Inspector(document.querySelector("#observablehq-chart2-2c73efd7"));
+  if (name === "viewof vegaliteTest") return new Inspector(document.querySelector("#observablehq-viewof-vegaliteTest-2c73efd7"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-2c73efd7"));
+  if (name === "viewof day") return new Inspector(document.querySelector("#observablehq-viewof-day-2c73efd7"));
+  if (name === "viewof line2") return new Inspector(document.querySelector("#observablehq-viewof-line2-2c73efd7"));
+  if (name === "viewof line") return new Inspector(document.querySelector("#observablehq-viewof-line-2c73efd7"));
+  return ["timeButtonsNaive"].includes(name);
+});
 </script>
-
-
-
-</body>
-</html>
-
